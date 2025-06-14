@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bapu's Lonche - Traditional Maharashtrian Pickles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#E65D20',
+secondary:'#8B4513',
+accent: '#556B2F',
+cream: '#FFF5E6',
+textDark: '#332211'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+},
+fontFamily: {
+'poppins': ['Poppins', 'sans-serif'],
+'mukta': ['Mukta', 'sans-serif'],
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #FFF5E6;
+color: #332211;
+}
+.marathi {
+font-family: 'Mukta', sans-serif;
+}
+.language-toggle input[type="radio"] {
+display: none;
+}
+.language-toggle label {
+cursor: pointer;
+padding: 0.5rem 1rem;
+transition: all 0.3s ease;
+}
+.language-toggle input[type="radio"]:checked + label {
+background-color: #E65D20;
+color: white;
+border-radius: 9999px;
+}
+.pickle-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pickle-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(139, 69, 19, 0.15);
+}
+.marathi-content {
+display: none;
+}
+.english-content {
+display: block;
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Bapu's</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#hero" class="text-textDark hover:text-primary transition-colors font-medium">Home</a>
+<a href="#products" class="text-textDark hover:text-primary transition-colors font-medium">Our Pickles</a>
+<a href="#thank-you" class="text-textDark hover:text-primary transition-colors font-medium">Thank You</a>
+</nav>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg text-primary"></i>
+</div>
+</div>
+</header>
+<!-- Language Toggle -->
+<div class="fixed top-20 left-0 right-0 z-40 bg-cream shadow-sm">
+<div class="container mx-auto px-4 py-2 flex justify-end">
+<div class="language-toggle bg-white rounded-full p-1 flex shadow-sm">
+<input type="radio" name="language" id="english" value="english" checked>
+<label for="english" class="english-label whitespace-nowrap">English</label>
+<input type="radio" name="language" id="marathi" value="marathi">
+<label for="marathi" class="marathi-label whitespace-nowrap">मराठी</label>
+</div>
+</div>
+</div>
+<!-- Main Content with padding for fixed header -->
+<main class="pt-32">
+<!-- Hero Section -->
+<section id="hero" class="relative min-h-[80vh] flex items-center bg-cream py-20">
+<div class="container mx-auto px-4 relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-[40%]">
+<img src="Bapu.png" alt="Bapu's Pickle Making" class="w-full h-auto rounded-lg shadow-xl">
+</div>
+<div class="md:w-[60%] bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-lg">
+<div class="english-content">
+<h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Authentic Maharashtrian Pickles</h1>
+<p class="text-xl text-textDark mb-8 max-w-2xl">Handcrafted with love and tradition, just like Bapu has been making for generations. Each jar carries the essence of our heritage and the warmth of home-made goodness.</p>
+<a href="#products" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium text-lg shadow-lg transition-all !whitespace-nowrap">Explore Our Pickles</a>
+</div>
+<div class="marathi-content">
+<h1 class="text-4xl md:text-5xl font-bold text-primary mb-6 marathi">प्रामाणिक महाराष्ट्रीय लोणची</h1>
+<p class="text-xl text-textDark mb-8 max-w-2xl marathi">प्रेम आणि परंपरेने हस्तनिर्मित, जसे बापू पिढ्यांपासून बनवत आहेत. प्रत्येक बरणीत आमच्या वारशाचे सार आणि घरगुती चांगुलपणाची उब आहे.</p>
+<a href="#products" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium text-lg shadow-lg transition-all !whitespace-nowrap marathi">आमची लोणची पहा</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section id="products" class="py-20 bg-cream">
+<div class="container mx-auto px-4">
+<div class="english-content">
+<h2 class="text-4xl font-bold text-primary mb-2 text-center">Our Signature Pickles</h2>
+<p class="text-lg text-textDark mb-12 text-center max-w-3xl mx-auto">Each variety is carefully prepared using traditional methods and the freshest ingredients</p>
+</div>
+<div class="marathi-content">
+<h2 class="text-4xl font-bold text-primary mb-2 text-center marathi">आमची विशेष लोणची</h2>
+<p class="text-lg text-textDark mb-12 text-center max-w-3xl mx-auto marathi">प्रत्येक प्रकार पारंपारिक पद्धतींचा वापर करून आणि ताज्या सामग्रीसह काळजीपूर्वक तयार केला जातो</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pickle 1 -->
+<div class="pickle-card bg-white rounded-lg overflow-hidden shadow-md">
+<img src="ll.jpg" alt="Lemon Pickle" class="w-full h-64 object-cover">
+<div class="p-6">
+<div class="english-content">
+<h3 class="text-2xl font-bold text-secondary mb-2">Lemon Pickle</h3>
+</div>
+<div class="marathi-content">
+<h3 class="text-2xl font-bold text-secondary mb-2 marathi">लिंबाचे लोणचे</h3>
+</div>
+</div>
+</div>
+<!-- Pickle 2 -->
+<div class="pickle-card bg-white rounded-lg overflow-hidden shadow-md">
+<img src="gp.jpg" alt="Garlic Pickle" class="w-full h-64 object-cover object-center">
+<div class="p-6">
+<div class="english-content">
+<h3 class="text-2xl font-bold text-secondary mb-2">Garlic Pickle</h3>
+</div>
+<div class="marathi-content">
+<h3 class="text-2xl font-bold text-secondary mb-2 marathi">लसूण लोणचे</h3>
+</div>
+</div>
+</div>
+<!-- Pickle 3 -->
+<div class="pickle-card bg-white rounded-lg overflow-hidden shadow-md">
+<img src="ml.png" alt="Mirchi Pickle" class="w-full h-64 object-cover object-center">
+<div class="p-6">
+<div class="english-content">
+<h3 class="text-2xl font-bold text-secondary mb-2">Green Chili Pickle</h3>
+</div>
+<div class="marathi-content">
+<h3 class="text-2xl font-bold text-secondary mb-2 marathi">हिरव्या मिरचीचे लोणचे</h3>
+</div>
+</div>
+</div>
+<!-- Pickle 4 -->
+<div class="pickle-card bg-white rounded-lg overflow-hidden shadow-md md:col-start-1 md:col-end-2">
+<img src="mvl.jpg" alt="Mixed Pickle" class="w-full h-64 object-cover object-center">
+<div class="p-6">
+<div class="english-content">
+<h3 class="text-2xl font-bold text-secondary mb-2">Mixed Pickle</h3>
+</div>
+<div class="marathi-content">
+<h3 class="text-2xl font-bold text-secondary mb-2 marathi">मिक्स व्हेज लोणचे</h3>
+</div>
+</div>
+</div>
+<!-- Pickle 5 -->
+<div class="pickle-card bg-white rounded-lg overflow-hidden shadow-md md:col-start-2 md:col-end-4">
+<img src="al.jpg" alt="Chili Pickle" class="w-full h-64 object-cover object-center">
+<div class="p-6">
+<div class="english-content">
+<h3 class="text-2xl font-bold text-secondary mb-2">Mango Pickle</h3>
+</div>
+<div class="marathi-content">
+<h3 class="text-2xl font-bold text-secondary mb-2 marathi">आंब्याचे लोणचे</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Thank You Section -->
+<section id="thank-you" class="py-20 bg-white">
+<div class="container mx-auto px-4 max-w-4xl">
+<div class="bg-cream rounded-lg p-8 md:p-12 shadow-lg border-2 border-primary/20 relative">
+<div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-primary text-white py-2 px-8 rounded-full text-xl font-medium">
+<div class="english-content">With Gratitude</div>
+<div class="marathi-content marathi">कृतज्ञतेसह</div>
+</div>
+<div class="text-center mt-6">
+<div class="english-content">
+<h2 class="text-4xl font-bold text-secondary mb-8">Thank You, Bapu</h2>
+<p class="text-lg mb-4 text-textDark">For over fifty years, your hands have crafted not just pickles, but memories that have flavored our family gatherings, celebrations, and everyday meals.</p>
+<p class="text-lg mb-4 text-textDark">Your dedication to preserving our cultural heritage through these traditional recipes has given us a taste of home that we carry wherever we go.</p>
+<p class="text-lg mb-4 text-textDark">Each jar of pickle represents hours of your love, patience, and the wisdom passed down through generations. The secret spice blends, the perfect timing, and the little tricks that make your pickles special - these are treasures we cherish.</p>
+<p class="text-lg mb-8 text-textDark">Thank you for filling our lives with flavor, tradition, and the unmistakable taste of home that only your pickles can provide.</p>
+<p class="text-xl font-semibold text-primary">With love and gratitude, from all of us.</p>
+</div>
+<div class="marathi-content">
+<h2 class="text-4xl font-bold text-secondary mb-8 marathi">धन्यवाद, बापू</h2>
+<p class="text-lg mb-4 text-textDark marathi">पन्नास वर्षांहून अधिक काळ, तुमच्या हातांनी केवळ लोणची नाही तर अशा आठवणी निर्माण केल्या आहेत ज्यांनी आमच्या कुटुंबातील एकत्र येणे, सण-समारंभ आणि रोजच्या जेवणाला एक वेगळीच चव दिली आहे.</p>
+<p class="text-lg mb-4 text-textDark marathi">या पारंपरिक पाककृतींमधून आपला सांस्कृतिक वारसा जपण्याच्या तुमच्या समर्पणामुळे आम्हाला घरच्या चवीचा असा अनुभव मिळाला आहे जो आम्ही कुठेही जाऊ तेथे आमच्यासोबत असतो.</p>
+<p class="text-lg mb-4 text-textDark marathi">लोणच्याची प्रत्येक बरणी तुमच्या प्रेमाचे, धैर्याचे आणि पिढ्यांपासून मिळालेल्या ज्ञानाचे प्रतीक आहे. मसाल्यांचे खास मिश्रण, योग्य वेळ आणि तुमची लोणची विशेष बनवणारे छोटे-छोटे गुपित - हे सर्व असे ठेवे आहेत जे आम्ही जपून ठेवतो.</p>
+<p class="text-lg mb-8 text-textDark marathi">आमचे आयुष्य चवीने, परंपरेने आणि घरच्या त्या अनोख्या स्वादाने समृद्ध केल्याबद्दल धन्यवाद जो फक्त तुमच्या लोणच्यांमधूनच मिळू शकतो.</p>
+<p class="text-xl font-semibold text-primary marathi">प्रेम आणि कृतज्ञतेसह, आम्हा सर्वांकडून.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-12">
+<div class="container mx-auto px-4">
+<div class="text-center">
+<h3 class="text-5xl font-['Pacifico'] text-white">Bapu's</h3>
+</div>
+</div>
+</footer>
+<!-- Language Toggle Script -->
+<script id="language-toggle-script">
+document.addEventListener('DOMContentLoaded', function() {
+const languageRadios = document.querySelectorAll('input[name="language"]');
+const englishContent = document.querySelectorAll('.english-content');
+const marathiContent = document.querySelectorAll('.marathi-content');
+languageRadios.forEach(radio => {
+radio.addEventListener('change', function() {
+if (this.value === 'english') {
+englishContent.forEach(el => el.style.display = 'block');
+marathiContent.forEach(el => el.style.display = 'none');
+} else if (this.value === 'marathi') {
+englishContent.forEach(el => el.style.display = 'none');
+marathiContent.forEach(el => el.style.display = 'block');
+}
+});
+});
+});
+</script>
+<!-- Mobile Menu Script -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.ri-menu-line');
+const nav = document.querySelector('nav');
+if (menuButton && nav) {
+menuButton.addEventListener('click', function() {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-16');
+nav.classList.toggle('right-4');
+nav.classList.toggle('bg-white');
+nav.classList.toggle('p-4');
+nav.classList.toggle('rounded-lg');
+nav.classList.toggle('shadow-lg');
+});
+}
+});
+</script>
+<!-- Smooth Scroll Script -->
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const headerOffset = 100;
+const elementPosition = targetElement.getBoundingClientRect().top;
+const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+window.scrollTo({
+top: offsetPosition,
+behavior: 'smooth'
+});
+// Close mobile menu if open
+const nav = document.querySelector('nav');
+if (nav && window.innerWidth < 768 && !nav.classList.contains('hidden')) {
+nav.classList.add('hidden');
+nav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-4', 'bg-white', 'p-4', 'rounded-lg', 'shadow-lg');
+}
+}
+});
+});
+});
+</script>
+</body>
+</html>
